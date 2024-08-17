@@ -1,0 +1,140 @@
+/* General page styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.navlist {
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: #262525; /* Background color of navigation */
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+
+.navlist li a::after, .navlist .active::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scalex(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+}
+
+.navlist li a:hover::after, .navlist .active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.left-container {
+    background: #262525;
+    width: 70%;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering the content */
+}
+
+.right-container {
+    background: linear-gradient(-45deg, #3877FF, #262525 70%);
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.design {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-circle {
+    width: 25rem; /* Adjusted width to better fit the form */
+    height: 25rem; /* Adjusted height to better fit the form */
+    background: #fff;
+    border-radius: 50%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.contact-form {
+    width: 90%; /* Adjusted width to fit inside the circle */
+    background: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #262525;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem; /* Adjusted padding for better fit */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #5DB9EE;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3877FF;
+}
+
+#formMessage {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+}
